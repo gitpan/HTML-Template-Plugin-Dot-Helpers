@@ -51,7 +51,7 @@ my $t3 = HTML::Template::Pluggable->new(
 	);
 $t3->param( some => { value => 3105345.2395, obj => My::Obj->new  } );
 my $o4 = $t3->output;
-diag("output: ", $o4);
+# diag("output: ", $o4);
 like( $o4, qr/Yes/ );
 
 __END__
