@@ -3,7 +3,7 @@ NAME
     templates
 
 VERSION
-    Version 0.03
+    Version 0.04
 
 SYNOPSIS
       use HTML::Template::Plugin::Dot::Helpers;
@@ -11,7 +11,7 @@ SYNOPSIS
     Then in your template, you can do:
 
       <tmpl_var Number.format_currency(orderitem.price)>
-  
+
 DESCRIPTION
     This helper class adds some useful objects to your Dot-enabled templates
     (see HTML::Template::Plugin::Dot).

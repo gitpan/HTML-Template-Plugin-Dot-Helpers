@@ -16,7 +16,6 @@ my $builder = Module::Build->new(
     add_to_cleanup      => [ 'HTML-Template-Plugin-Dot-Helpers-*' ],
 	create_makefile_pl  => 'traditional',
 	create_readme       => 1,
-		
 );
 
 $builder->create_build_script();
