@@ -1,4 +1,7 @@
 package HTML::Template::Plugin::Dot::Helpers;
+{
+  $HTML::Template::Plugin::Dot::Helpers::VERSION = '0.06';
+}
 
 use warnings;
 use strict;
@@ -11,17 +14,17 @@ HTML::Template::Pluggable->add_trigger('before_output' => sub {
 	$self->param('Number' => HTML::Template::Plugin::Dot::Helpers::Number->new);
 });
 
+1; # End of HTML::Template::Plugin::Dot::Helpers
+
+__END__
+
 =head1 NAME
 
 HTML::Template::Plugin::Dot::Helpers - Add useful objects to your templates
 
 =head1 VERSION
 
-Version 0.04
-
-=cut
-
-our $VERSION = '0.04';
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -30,7 +33,7 @@ our $VERSION = '0.04';
 Then in your template, you can do:
 
   <tmpl_var Number.format_currency(orderitem.price)>
-
+  
 =head1 DESCRIPTION
 
 This helper class adds some useful objects to your Dot-enabled templates (see
@@ -46,7 +49,7 @@ An extended Number::Format object. See L<Number::Format> for documentation.
 Note that only the object oriented methods are supported here.
 
 I've added several generic numerical methods. Most (well, all in this release)
-are boolean methods, useful in C<< <tmpl_if>s >>. They are:
+are boolean methods, useful in C<< <tmpl_if>s >>. They are: 
 
 =over 8
 
@@ -96,5 +99,3 @@ This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =cut
-
-1; # End of HTML::Template::Plugin::Dot::Helpers
